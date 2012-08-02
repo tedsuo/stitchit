@@ -10,20 +10,22 @@ The api may change to include a .pipe interface, as well as a way to also load t
 
 ## Usage
 
-    var stitchit = require('stitchit');
- 
-    // the following are optional, except path 
-    var options = {
-      path: '/some/path/to/templates',
-      namespace: 'JST',
-      compiler: '_.template',
-      extension: 'jst'
-    }
+```javascript
+var stitchit = require('stitchit');
 
-    // if you are fine with all the defaults, just pass in the path as a string
-    options = '/some/path/to/templates';
+// the following are optional, except path 
+var options = {
+  path: '/some/path/to/templates',
+  namespace: 'JST',
+  compiler: '_.template',
+  extension: 'jst'
+}
 
-    // stitchit creates a string you can serve directly to the browser, or write to a file, etc
-    stitchit(options,function(err,templates){
-      fs.writeFile('/path/to/compiled/script',templates);
-    });
+// if you are fine with all the defaults, just pass in the path as a string
+options = '/some/path/to/templates';
+
+// stitchit creates a string you can serve directly to the browser, or write to a file, etc
+stitchit(options,function(err,templates){
+  fs.writeFile('/path/to/compiled/script',templates);
+});
+```
