@@ -4,7 +4,8 @@
   "description": "compile a directory of js templates into a single script, based on jammit's template compiler",
   "version": "0.0.1",
   "repository": {
-    "url": "https://github.com/tedsuo/stitchit"
+    "type: "git",
+    "url": "https://github.com/tedsuo/stitchit.git"
   },
   "main": "stitchit.js",
   "scripts": {
