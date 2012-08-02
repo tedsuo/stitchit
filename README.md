@@ -1,6 +1,6 @@
 #Stitchit
 
-a simple template compiler, based on Jammit and designed for node.  Use it to take a directory of template files and stitch them together into a single script that can be loaded in the browser.
+A simple template compiler, based on Jammit and designed for node.  Use it to take a directory of template files and stitch them together into a single script that can be loaded in the browser.
 
 The api may change to include a .pipe interface, as well as a way to also load the templates into your node environment. Maybe a commandline interface? Who knows, it's version 0.0.1.
 
@@ -16,7 +16,7 @@ var stitchit = require('stitchit');
 // the following are optional, except path 
 var options = {
   path: '/some/path/to/templates',
-  namespace: 'JST',
+  namespace: 'window.JST',
   compiler: '_.template',
   extension: 'jst'
 }
