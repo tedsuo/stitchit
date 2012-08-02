@@ -2,7 +2,7 @@ var _ = require('underscore'),
     walk = require('walk').walk,
     fs = require('fs');
 
-var DEFAULT_NAMESPACE = 'JST';
+var DEFAULT_NAMESPACE = 'window.JST';
 var DEFAULT_COMPILER = '_.template';
 var DEFAULT_EXTENSION = 'jst';
 
@@ -18,7 +18,7 @@ var TemplateCompiler = function(o){
   this.compiler = o.compiler || DEFAULT_COMPILER;
   this.extension = '.' + (o.extension || DEFAULT_EXTENSION);
   this.extension_matcher = RegExp('\\'+this.extension+'$');
-  this.templates = "var "+this.namespace+" = "+this.namespace+" || {};\n";
+  this.templates = this.namespace+" = "+this.namespace+" || {};\n";
 };
 
 _.extend(TemplateCompiler.prototype,{
@@ -75,7 +75,7 @@ _.extend(TemplateCompiler.prototype,{
   },
 
   addTemplate: function(name,template){
-    this.templates += "JST['"+name+"'] = _.template("+JSON.stringify(template)+");\n";
+    this.templates += this.namespace+"['"+name+"'] = "+this.compiler+"("+JSON.stringify(template)+");\n";
   },
 
   getTemplates: function(){
