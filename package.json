@@ -12,8 +12,7 @@
     "test": "make test"
   },
   "dependencies": {
-    "underscore" : "*",
-    "walk": "*"
+    "underscore" : "*"
   },
   "devDependencies": {
     "mocha": "*",
