@@ -19,7 +19,9 @@ var TemplateCompiler = function(o){
   this.compiler = o.compiler || DEFAULT_COMPILER; 
   this.extension = '.' + (o.extension || DEFAULT_EXTENSION);
   this.extension_matcher = RegExp('\\'+this.extension+'$');
-  this.templates = "if(typeof "+this.namespace+" === 'undefined') var "+this.namespace+";\n"+this.namespace+" = "+this.namespace+" || {};\n";
+  this.templates = '';
+  if(!/\./.test(this.namespace))this.templates = "if(typeof "+this.namespace+" === 'undefined') var "+this.namespace+";\n";
+  this.templates += this.namespace+" = "+this.namespace+" || {};\n";
 };
 
 _.extend(TemplateCompiler.prototype,{
