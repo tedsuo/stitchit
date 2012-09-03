@@ -2,7 +2,7 @@
   "author": "tedsuo",
   "name": "stitchit",
   "description": "compile a directory of js templates into a single script, based on jammit's template compiler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/tedsuo/stitchit.git"
