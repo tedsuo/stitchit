@@ -28,4 +28,7 @@ options = '/some/path/to/templates';
 stitchit(options,function(err,templates){
   fs.writeFile('/path/to/compiled/script',templates);
 });
+
+// alternatively, if you'd like everything done syncronously, don't pass a callback
+var templates = stitchit(options);
 ```
