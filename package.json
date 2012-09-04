@@ -2,7 +2,7 @@
   "author": "tedsuo",
   "name": "stitchit",
   "description": "compile a directory of js templates into a single script, based on jammit's template compiler",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/tedsuo/stitchit.git"
@@ -12,7 +12,8 @@
     "test": "make test"
   },
   "dependencies": {
-    "underscore" : "*"
+    "underscore" : "*",
+    "forEachAsync": "~2.2"
   },
   "devDependencies": {
     "mocha": "*",
